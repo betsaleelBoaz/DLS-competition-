@@ -1,0 +1,34 @@
+<iframe width="560" height="315" 
+      src="https://www.youtube.com/embed/2_oYzF1vWKw" 
+      title="DLS Match Live" frameborder="0" allowfullscreen></iframe>
+  </div>
+
+  <form id="tournament-form" onsubmit="submitForm(event)">
+    <h2>Enskri nan Tounwa</h2>
+    <label for="name">Non ou:</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Imèl ou:</label>
+    <input type="email" id="email" name="email" required />
+
+    <input type="submit" value="Voye Enskripsyon" />
+  </form>
+
+  <script>
+    function showVideo() {
+      document.getElementById('video-section').style.display = 'block';
+      document.getElementById('tournament-form').style.display = 'none';
+    }
+    function showForm() {
+      document.getElementById('video-section').style.display = 'none';
+      document.getElementById('tournament-form').style.display = 'block';
+    }
+    function submitForm(event) {
+      event.preventDefault();
+      alert('Mèsi pou enskripsyon ou! Nou pral kontakte w byento.');
+      document.getElementById('tournament-form').reset();
+    }
+  </script>
+</body>
+</html>
+```
