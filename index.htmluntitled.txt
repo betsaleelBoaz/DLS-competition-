@@ -1,47 +1,58 @@
-
-
 ```html
 <!DOCTYPE html>
 <html lang="ht">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>DLS Live Konkou</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
       background-color: #111;
       color: white;
+      font-family: Arial, sans-serif;
       text-align: center;
-      padding: 50px;
-    }
-    h1 {
-      color: #00ff88;
+      padding: 30px;
     }
     button {
       background-color: #00ff88;
-      color: #111;
-      padding: 15px 30px;
-      margin: 10px;
       border: none;
+      padding: 15px 25px;
+      margin: 10px;
       font-size: 18px;
       cursor: pointer;
+      border-radius: 5px;
     }
-    p {
-      max-width: 600px;
-      margin: auto;
-      font-size: 18px;
+    iframe {
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+    #tournament-form {
+      display: none;
+      margin-top: 20px;
+      max-width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: left;
+    }
+    input, label {
+      display: block;
+      width: 100%;
+      margin: 10px 0;
+      font-size: 16px;
+    }
+    input[type="submit"] {
+      background-color: #00ff88;
+      color: #111;
+      cursor: pointer;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
     }
   </style>
 </head>
 <body>
   <h1>DLS Live Konkou</h1>
-  <p>Yon platfòm kote w ka gade match Dream League Soccer an dirèk, patisipe nan tounwa, epi viv plezi a ak lòt jwè yo!</p>
-  <div>
-    <button>Gade Match</button>
-    <button>Antre Tounwa</button>
-    <button>Konekte</button>
-  </div>
-</body>
-</html>
-```
+  <button onclick="showVideo()">Gade Match</button>
+  <button onclick="showForm()">Antre Tounwa</button>
+  <button onclick="alert('Fonksyon Konekte poko disponib')">Konekte</button>
 
+  <div id="video-section" style="display:none;">
